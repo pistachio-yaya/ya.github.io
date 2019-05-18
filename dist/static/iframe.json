@@ -1,0 +1,17 @@
+{
+  "data": [{
+      "p": "iframe--本地打开出现跨域问题--001",
+      "t": "本地打开'file:///'这种方式被视为跨域，如果用服务器打开能解决。推荐使用chrome的插件'Web Server For Chrome',这里需要注意的是：有时候浏览器并不会报跨域的错误，而是直接报js找不到节点之类的错误，因此应当在遇到iframe开发时，记得用服务器执行，否则本地打开时报错会搞得一头雾水",
+      "c": "Blocked%20a%20frame%20with%20origin%20from%20accessing%20a%20cross-origin%20frame"
+    },{
+      "p": "iframe--确认鼠标是否点击在iframe内--002",
+      "t": "使用场景：上层button盖住下层iframe，iframe点击后在上层button对应的位置出现同样的button，确认点击事件是否在iframe上，倘若在，则button出现",
+      "c": "var%20target%20%3D%20document.activeElement.tagName%3B%0Atarget%20%3D%3D%3D%20%27iframe%27%20%3F%20%22do%20something%22%3A%22do%20nothing%22"
+    },{
+      "p": "iframe--给iframe添加鼠标事件--003",
+      "t": "因为iframe内的页面是一个单独的页面，在外层html内直接获取iframe节点时，iframe内的页面可能尚未加载完毕，所以直接添加事件监听器会失败，另一种方法，在iframe的外层添加点击事件同样失败，解决方案是，在iframe.onload之后添加事件监听器",
+      "c": "var%20ifr%20%3D%20document.querySelector%28%22iframe%22%29%3B%0Aifr.onload%20%3D%20function%20%28%29%20%7B%0A%20%20%20%20ifr.contentDocument.onmousedown%20%3D%20function%20%28e%29%20%7B%0Aconsole.log%28%22click%20ifr%22%29%0A%20%20%20%20%7D%3B%0A%7D"
+    }
+
+  ]
+}

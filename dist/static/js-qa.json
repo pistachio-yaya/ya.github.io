@@ -1,0 +1,8 @@
+{
+    "data": [{
+        "p": "引用类型的应用--001",
+        "c": "//%u89E3%u91CA%u8FD0%u7B97%u8FC7%u7A0B%u548C%u5BF9%u8C61%u5F15%u7528%u5173%u7CFB%u7684%u53D8%u5316%0Avar%20x%20%3D%20%7Bm%3A1%7D%0Avar%20y%20%3D%20x%3B%0Ax.a%3D%20x%20%3D%20%7Bm%3A2%7D%3B%0A//console.log%28x.a%29%20%u8F93%u51FA%20undefined%0A//console.log%28y.a%29%20%u8F93%u51FA%20%7Bm%3A2%7D%0A%0A%0A%0A%0A"
+      }
+      
+    ]
+  }
