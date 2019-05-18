@@ -2,7 +2,7 @@
     "data": [{
         "p": "this--axios中this的值为undefined",
         "t": "原因:this不能指向当前vue实例，解决方案：使用es6的箭头函数，箭头函数内部的this是词法作用域，由外层调用者vue来确定，使用箭头函数之后，箭头函数指向的函数内部的this已经绑定了外部的vue实例了",
-        "c":  "%20%0A%20axios%28%22static/function.json%22%29.then%28res%20%3D%3E%20%7B%0A%20%20var%20a%20%3D%20%20res.data.data%3B%0A%20%20for%28var%20i%20%3D%200%3Bi%3C%20a.length%3B%20i++%29%7B%0A%20%20%20%20%20%20a%5Bi%5D.c%3D%20unescape%28a%5Bi%5D.c%29%3B%0A%20%20%20%20%20%20a%5Bi%5D.p%20%3D%20a%5Bi%5D.p%3B%0A%20%20%7D%0A%20%20this.items%20%3D%20a%3B%0A%7D%29"
+        "c":  "axios%28%22static/function.json%22%29.then%28res%20%3D%3E%20%7B%0A%20%20var%20a%20%3D%20%20res.data.data%3B%0A%20%20for%28var%20i%20%3D%200%3Bi%3C%20a.length%3B%20i++%29%7B%0A%20%20%20%20%20%20a%5Bi%5D.c%3D%20unescape%28a%5Bi%5D.c%29%3B%0A%20%20%20%20%20%20a%5Bi%5D.p%20%3D%20a%5Bi%5D.p%3B%0A%20%20%7D%0A%20%20this.items%20%3D%20a%3B%0A%7D%29"
       }
       
     ]
